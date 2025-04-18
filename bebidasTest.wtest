@@ -1,0 +1,16 @@
+import bebidas.*
+
+
+describe "Test de Tito" {
+
+    test "La velocidad de Tito es 35m/s despues de tomar 50cm cubicos de terere" {
+      tito.consumir(50, terere)
+      assert.equals(35, tito.velocidad())
+    }
+
+    test "Tito muere despues de tomar cianuro (su velocidad es 0)" {
+      tito.consumir(3, cianuro)
+      assert.equals(0, tito.velocidad())
+    }
+
+}
